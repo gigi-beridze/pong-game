@@ -1,1 +1,28 @@
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+#gameContainer{
+    text-align: center;
+}
+#gameBoard{
+    border: 4px solid white;
+    padding: 10px;
+}
+#scoreText{
+    font-family: "consolas", monospace;
+    font-size: 100px;
+    color: #fff;
+}
+#resetBtn{
+    font-family: "Permanent Marker", cursive;
+    font-size: 22px;
+    width: 100px;
+    height: 50px;
+    border: 4px solid;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #fff;
+}
