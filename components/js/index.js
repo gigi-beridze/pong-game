@@ -1,3 +1,4 @@
+// veriables
 const gameBoard = document.querySelector('#gameBoard')
 const ctx = gameBoard.getContext("2d")
 const scoreText = document.querySelector('#scoreText')
@@ -33,14 +34,16 @@ let paddle2 = {
     y: gameHeight - 100
 }
 
-window.addEventListener('keydown', changeDirection)
-resetBtn.addEventListener('click', resetGame)
+window.addEventListener('keydown', changeDirection) // change direction function
+resetBtn.addEventListener('click', resetGame) // reset game function
 
+// game start function
 gameStart()
 function gameStart(){
     createBall()
     nextTick()
 }
+// all function have name what its do
 function nextTick(){
     intervalID = setTimeout(() => {
         clearBoard()
@@ -108,6 +111,7 @@ function checkCollision(){
         player2Score += 1
         updateScore()
         createBall()
+        // choose winner
         if(player2Score >=3){
             alert('player 2 win')
             resetGame()
@@ -141,6 +145,7 @@ function checkCollision(){
 }
 function changeDirection(event){
     const keyPressed = event.keyCode
+    // directions of paddles
     const paddle1Up = 87
     const paddle1Down = 83
     const paddle2Up = 38
@@ -169,9 +174,9 @@ function changeDirection(event){
     }
 }
 function updateScore(){
-    scoreText.textContent = `${player1Score} : ${player2Score}`
+    scoreText.textContent = `${player1Score} : ${player2Score}` // scores
 }
-function resetGame(){
+function resetGame(){ // reset game
     player1Score = 0
     player2Score = 0
 
